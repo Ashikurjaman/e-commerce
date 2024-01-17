@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    background-color:#1C2B35 ;
+    min-width: fit-content;
+    padding: 20px 97px 30px 97px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header div a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 700;
+}
+.header a:hover{
+    color: #ff9900;
+}
