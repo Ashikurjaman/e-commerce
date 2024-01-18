@@ -9,12 +9,15 @@ const addLocalStorage = id =>{
         const newQuantity = quintity + 1;
         shoppingCart[id] = newQuantity;
     }
+    //Set cart in local Storage
     localStorage.setItem('cart',JSON.stringify(shoppingCart))
 }
 
 
 const addShoppingCart =()=>{
     let shoppingCart = {};
+
+    //Get cart from local Storage
     const storedCart = localStorage.getItem('cart');
     if(storedCart){
         shoppingCart= JSON.parse(storedCart);
@@ -24,4 +27,4 @@ const addShoppingCart =()=>{
 }
 
 
-export {addLocalStorage}
+export {addLocalStorage,addShoppingCart}
