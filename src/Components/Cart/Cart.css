@@ -2,5 +2,12 @@
     background-color: #FF9900;
     padding: 30px;
     text-align: center;
-    
+    position: sticky;
+    top: 0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.cart h6{
+    font-size: 17px;
 }

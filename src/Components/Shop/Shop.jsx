@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Shop.css'
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
+import { addLocalStorage } from '../../utilities/localstorage';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart , setCart ] =useState([])
@@ -10,9 +11,15 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     },[]);
+
+    useEffect(()=>{
+        // addLocalStorage(cart.id)
+    },[]);
     const handelOrder = (product) =>{
         const addItem = [...cart ,product];
         setCart(addItem);
+        addLocalStorage(product.id)
+        console.log(product.id);
     }
     return (
         <div className='shop-container'>
