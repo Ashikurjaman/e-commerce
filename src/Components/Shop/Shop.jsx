@@ -23,7 +23,7 @@ const Shop = () => {
         (product) => product.id === id
       );
 
-      console.log(addToCartLocalstorageData);
+    
       //find quintity from storedata
 
       if (addToCartLocalstorageData) {
